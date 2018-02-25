@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset="utf-8">
+	<title>地图构架3</title>
+</head>
+<script type="text/javascript" src="lufylegend.js-lufylegend-1.10.1/lufylegend-1.10.1.min.js">
+	</script>
+	<script type="text/javascript" src="lufylegend.js-lufylegend-1.10.1/lufylegend.ui-0.14.1.min.js">
+	</script>
+<link rel="stylesheet" type="text/css" href="css/text4.css">
+<body>
+<div id="bg">
+		<div id="header">
+			<div id="logo">
+				<p>
+					<a href="#"><img src="logo.png" width="1200"></a>
+				</p>
+			</div>
+			<div id="nav">
+				<div id="ab">
+					<ul>
+						<li>
+							<a href="课程地图1.html">教育目标</a>
+						</li>
+						<li>
+							<a href="课程地图1.html#basic">基本素养</a>
+						</li>
+						<li>
+							<a href="#">课程规划</a>
+						</li>
+						<li>
+							<a href="#">课程地图构架</a>
+						</li>
+						<li>
+							<a href="指标构成.html" >指标构成</a>
+						</li>
+						<li>
+							<a href="#">培养路径</a>
+						</li>
+						<li>
+							<a href="#">发展路径</a>
+						</li>
+					</ul>
+					<br class="clear" />
+				</div>
+			</div>
+		</div>
+<div id="mylegend"></div>
+<div class="footer bottom">
+  
+				地址：四川省成都市金堂县大学城
+				联系电话：028-67935809
+				邮编：610400
+				备案号：51130030090125
+				网络报警：http://www.ncwa.com.cn 
+	</div>
+</body>
+<script type="text/javascript">
+   init(50,"mylegend",1200,700,main);
+   var first_shape,second_shape,eighth_shape;
+   var backLayer,ThreeOne_part,ThreeTwo_part,ThreeThree_part,ThreeFour_part,ThreeFive_part;
+   var ThreeSix_part,ThreeSeven_part,ThreeEight_part,ThreeNine_part,ThreeTen_part,ThreeEleven_part,ThreeTwelve_part;
+   var trew1,trew2,button31;
+   function main(){
+
+    backLayer=new LSprite();
+    addChild(backLayer);
+    //层
+
+
+
+    lineback3=new LSprite();
+    backLayer.addChild(lineback3);
+
+    ThreeFour_part=new LSprite();
+    backLayer.addChild(ThreeFour_part);
+    
+    ThreeFive_part=new LSprite();
+    backLayer.addChild(ThreeFive_part);
+
+    //包装
+    line3();
+    three_one(1,"balck",[(LGlobal.width+1800)*0.025,(LGlobal.width+1800)*0.06,(LGlobal.width+1800)*0.020,(LGlobal.width+1800)*0.11]);
+    three_two(1,"balck",[(LGlobal.width+1800)*0.085,(LGlobal.width+1800)*0.048,(LGlobal.width+1800)*0.106,(LGlobal.width+1800)*0.020,30]);
+    three_three(1,"balck",[(LGlobal.width+1800)*0.085,(LGlobal.width+1800)*0.158,(LGlobal.width+1800)*0.106,(LGlobal.width+1800)*0.020,30]);
+    three_four(1,"balck",[(LGlobal.width+1800)*0.202,(LGlobal.width+1800)*0.024,(LGlobal.width+1800)*0.1484,(LGlobal.width+1800)*0.070]);
+    three_five(1,"balck",[(LGlobal.width+1800)*0.202,(LGlobal.width+1800)*0.132,(LGlobal.width+1800)*0.1484,(LGlobal.width+1800)*0.070]);
+    three_six(1,"balck",[(LGlobal.width+1800)*0.210,(LGlobal.width+1800)*0.033,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    three_seven(1,"balck",[(LGlobal.width+1800)*0.283,(LGlobal.width+1800)*0.033,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    three_eight(1,"balck",[(LGlobal.width+1800)*0.283,(LGlobal.width+1800)*0.063,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    three_nine(1,"balck",[(LGlobal.width+1800)*0.210,(LGlobal.width+1800)*0.141,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    three_ten(1,"balck",[(LGlobal.width+1800)*0.283,(LGlobal.width+1800)*0.141,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    three_eleven(1,"balck",[(LGlobal.width+1800)*0.210,(LGlobal.width+1800)*0.171,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    three_twelve(1,"balck",[(LGlobal.width+1800)*0.283,(LGlobal.width+1800)*0.171,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+
+
+    }
+    function line3(){
+        //第一条
+            line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[35,0,0,0]);
+            line_shap3.x=572;
+            line_shap3.y=172;
+            lineback3.addChild(line_shap3);
+            //第二条
+            line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[35,0,0,0]);
+            line_shap3.x=572;
+            line_shap3.y=506;
+            lineback3.addChild(line_shap3);
+            //第三条
+           
+            //第四条
+            
+            //第五条
+           
+            //第六条
+           
+            //第七条
+           
+            //第八条
+            
+            //第九条
+          
+            //第十条
+            line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[40,0,0,0]);
+            line_shap3.x=809;
+            line_shap3.y=130;
+            lineback3.addChild(line_shap3);
+            //第十一条
+            line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[40,0,0,0]);
+            line_shap3.x=809;
+            line_shap3.y=450;
+            lineback3.addChild(line_shap3);
+            //第十二条
+            line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[40,0,0,0]);
+            line_shap3.x=809;
+            line_shap3.y=540;
+            lineback3.addChild(line_shap3);
+            //第十三条
+            line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[0,18,0,0]);
+            line_shap3.x=935;
+            line_shap3.y=172;
+            lineback3.addChild(line_shap3);
+            //第十四条
+            line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[0,18,0,0]);
+            line_shap3.x=935;
+            line_shap3.y=496;
+            lineback3.addChild(line_shap3);
+    }
+       function three_one(x,y,q,w,e,r){
+        var trew1 = new LSprite();
+        backLayer.addChild(trew1);
+        ThreeOne_part=new LSprite();
+       // backLayer.addChild(ThreeOne_part);
+        trew1.addChild(ThreeOne_part);
+        
+        first_shape=new LShape();
+        first_shape.graphics.drawRect(x,y,q,w,e,r);
+        ThreeOne_part.addChild(first_shape);
+       
+        //文字
+        first_picture1=new LTextField();
+        first_picture2=new LTextField();
+        first_picture3=new LTextField();
+        first_picture4=new LTextField();
+        first_picture5=new LTextField();
+        first_picture6=new LTextField();
+        first_picture7=new LTextField();
+        first_picture8=new LTextField();
+        first_picture9=new LTextField();
+        first_picture10=new LTextField();
+        first_picture11=new LTextField();
+        first_picture1.text="创";
+        first_picture2.text="新";
+        first_picture3.text="创";
+        first_picture4.text="业";
+        first_picture5.text="意";
+        first_picture6.text="识";
+        first_picture7.text="技";
+        first_picture8.text="能";
+        first_picture9.text="培";
+        first_picture11.text="育";
+        first_picture10.text="(10)";
+        first_picture1.x=(LGlobal.width+1800)*0.031;
+        first_picture2.x=(LGlobal.width+1800)*0.031;
+        first_picture3.x=(LGlobal.width+1800)*0.031;
+        first_picture4.x=(LGlobal.width+1800)*0.031;
+        first_picture5.x=(LGlobal.width+1800)*0.031;
+        first_picture6.x=(LGlobal.width+1800)*0.031;
+        first_picture7.x=(LGlobal.width+1800)*0.031;
+        first_picture8.x=(LGlobal.width+1800)*0.031;
+        first_picture9.x=(LGlobal.width+1800)*0.031;
+        first_picture10.x=(LGlobal.width+1800)*0.030;
+        first_picture11.x=(LGlobal.width+1800)*0.031;
+        first_picture1.y=(LGlobal.width+1800)*0.062;
+        first_picture2.y=(LGlobal.width+1800)*0.072;
+        first_picture3.y=(LGlobal.width+1800)*0.082;
+        first_picture4.y=(LGlobal.width+1800)*0.092;
+        first_picture5.y=(LGlobal.width+1800)*0.102;
+        first_picture6.y=(LGlobal.width+1800)*0.112;
+        first_picture7.y=(LGlobal.width+1800)*0.122;
+        first_picture8.y=(LGlobal.width+1800)*0.132;
+        first_picture9.y=(LGlobal.width+1800)*0.142;
+        first_picture10.y=(LGlobal.width+1800)*0.162;
+        first_picture11.y=(LGlobal.width+1800)*0.152;
+        first_picture1.size=(LGlobal.width+1800)*0.0075;
+        first_picture2.size=(LGlobal.width+1800)*0.0075;
+        first_picture3.size=(LGlobal.width+1800)*0.0075;
+        first_picture4.size=(LGlobal.width+1800)*0.0075;
+        first_picture5.size=(LGlobal.width+1800)*0.0075;
+        first_picture6.size=(LGlobal.width+1800)*0.0075;
+        first_picture7.size=(LGlobal.width+1800)*0.0075;
+        first_picture8.size=(LGlobal.width+1800)*0.0075;
+        first_picture9.size=(LGlobal.width+1800)*0.0075;
+        first_picture11.size=(LGlobal.width+1800)*0.0075;
+        ThreeOne_part.addChild(first_picture1);
+        ThreeOne_part.addChild(first_picture2);
+        ThreeOne_part.addChild(first_picture3);
+        ThreeOne_part.addChild(first_picture4);
+        ThreeOne_part.addChild(first_picture5);
+        ThreeOne_part.addChild(first_picture6);
+        ThreeOne_part.addChild(first_picture7);
+        ThreeOne_part.addChild(first_picture8);
+        ThreeOne_part.addChild(first_picture9);
+        ThreeOne_part.addChild(first_picture10);
+        ThreeOne_part.addChild(first_picture11);
+
+        // var button31 = new LButton(ThreeOne_part,ThreeOne_part,ThreeOne_part);
+          //  trew1.addChild(button31);
+          LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            trew1.useCursor="pointer";
+            trew1.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+          first_picture1.color="red";
+            first_picture2.color="red";
+            first_picture3.color="red";
+            first_picture4.color="red";
+            first_picture5.color="red";
+            first_picture6.color="red";
+            first_picture7.color="red";
+            first_picture8.color="red";
+            first_picture9.color="red";
+            first_picture10.color="red";
+             first_picture11.color="red";
+           
+           
+            });
+             trew1.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            first_picture1.color="fff";
+            first_picture2.color="fff";
+            first_picture3.color="fff";
+            first_picture4.color="fff";
+            first_picture5.color="fff";
+            first_picture6.color="fff";
+            first_picture7.color="fff";
+            first_picture8.color="fff";
+            first_picture9.color="fff";
+            first_picture10.color="fff";
+             first_picture11.color="fff";
+            });
+            trew1.addEventListener(LMouseEvent.MOUSE_UP,run31);
+
+      
+
+    }
+
+      
+
+    function three_two(x,y,q,w,e,r,t){
+         var trew2 = new LSprite();
+        backLayer.addChild(trew2);
+        ThreeTwo_part=new LSprite();
+        trew2.addChild(ThreeTwo_part);
+   
+        second_shape=new LShape();
+        second_shape.graphics.drawRoundRect(x,y,q,w,e,r,t);
+        ThreeTwo_part.addChild(second_shape);
+        second_picture11=new LTextField();
+        second_picture11.text="创新思维训练课程包";
+        second_picture21=new LTextField();
+        second_picture21.text="(6)";
+        second_picture11.x=(LGlobal.width+1800)*0.103;
+        second_picture11.y=(LGlobal.width+1800)*0.049;
+        second_picture11.size=LGlobal.width*0.0075;
+        second_picture11.color="red";
+        second_picture21.x=(LGlobal.width+1800)*0.130;
+        second_picture21.y=(LGlobal.width+1800)*0.058;
+        second_picture21.size=(LGlobal.width+1800)*0.0075;
+        second_picture21.color="red";
+        ThreeTwo_part.addChild(second_picture11);
+        ThreeTwo_part.addChild(second_picture21);
+
+        
+      //  var button32 = new LButton(ThreeTwo_part,ThreeTwo_part,ThreeTwo_part);
+         //   trew2.addChild(button32);
+           LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            trew2.useCursor="pointer";
+            trew2.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            second_picture11.color="blue";
+            second_picture21.color="blue";
+      
+            });
+             trew2.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            second_picture11.color="red";
+            second_picture21.color="red";
+      
+            });
+            trew2.addEventListener(LMouseEvent.MOUSE_UP,run32);
+
+       }
+       
+       function three_three(x,y,q,w,e,r,t){
+        var trew3 = new LSprite();
+        backLayer.addChild(trew3);
+         ThreeThree_part=new LSprite();
+         trew3.addChild(ThreeThree_part);
+        second_shape=new LShape();
+        second_shape.graphics.drawRoundRect(x,y,q,w,e,r,t);
+        ThreeThree_part.addChild(second_shape);
+
+        second_picture1=new LTextField();
+        second_picture1.text="创业技能课练课程包";
+        second_picture2=new LTextField();
+        second_picture2.text="(4)";
+        second_picture1.x=(LGlobal.width+1800)*0.103;
+        second_picture1.y=(LGlobal.width+1800)*0.159;
+        second_picture1.size=LGlobal.width*0.0075;
+        second_picture1.color="red";
+        second_picture2.x=(LGlobal.width+1800)*0.130;
+        second_picture2.y=(LGlobal.width+1800)*0.168;
+        second_picture2.size=(LGlobal.width+1800)*0.0075;
+        second_picture2.color="red";
+        ThreeThree_part.addChild(second_picture1);
+        ThreeThree_part.addChild(second_picture2);
+
+ 
+       // var button33 = new LButton(ThreeThree_part,ThreeThree_part,ThreeThree_part);
+           // trew3.addChild(button33);
+           LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            trew3.useCursor="pointer";
+            trew3.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            second_picture1.color="blue";
+            second_picture2.color="blue";
+      
+            });
+             trew3.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            second_picture1.color="red";
+            second_picture2.color="red";
+      
+            });
+            trew3.addEventListener(LMouseEvent.MOUSE_UP,run33);
+
+    
+  
+
+       }
+
+       function three_four(x,y,q,w,e,r){
+        fifth_shape=new LShape();
+        fifth_shape.graphics.drawRect(x,y,q,w,e,r);
+        ThreeFour_part.addChild(fifth_shape);
+       }
+
+       function three_five(x,y,q,w,e,r){
+        fifth_shape=new LShape();
+        fifth_shape.graphics.drawRect(x,y,q,w,e,r);
+        ThreeFive_part.addChild(fifth_shape);
+       }
+
+       function three_six(x,y,q,w,e,r){
+        var trew4 = new LSprite();
+        backLayer.addChild(trew4);
+        ThreeSix_part=new LSprite();
+        trew4.addChild(ThreeSix_part);
+ 
+        eighth_shape=new LShape();
+        eighth_shape.graphics.drawRect(x,y,q,w,e,r);
+        ThreeSix_part.addChild(eighth_shape);
+
+         line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap3.x=630;
+            line_shap3.y=149;
+            ThreeSix_part.addChild(line_shap3);
+        eighth_picture11=new LTextField();
+        eighth_picture11.text="思维方式认识入门";
+        eighth_picture21=new LTextField();
+        eighth_picture21.text="1,\n\n\nR,\n\n\n(2,0)";
+        eighth_picture11.x=(LGlobal.width+1800)*0.220;
+        eighth_picture11.y=(LGlobal.width+1800)*0.038;
+        eighth_picture21.x=(LGlobal.width+1800)*0.225;
+        eighth_picture21.y=(LGlobal.width+1800)*0.051;
+        ThreeSix_part.addChild(eighth_picture11);
+        ThreeSix_part.addChild(eighth_picture21);
+
+       
+       /* var button36 = new LButton(ThreeSix_part,ThreeSix_part,ThreeSix_part);
+            trew4.addChild(button36);*/
+            LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            trew4.useCursor="pointer";
+            trew4.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            eighth_picture11.color="red";
+            eighth_picture21.color="red";
+      
+            });
+             trew4.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            eighth_picture21.color="fff";
+            eighth_picture11.color="fff";
+      
+            });
+            trew4.addEventListener(LMouseEvent.MOUSE_UP,run36);
+  
+
+       }
+
+       function three_seven(x,y,q,w,e,r){
+            var trew5 = new LSprite();
+        backLayer.addChild(trew5);
+         ThreeSeven_part=new LSprite();
+        trew5.addChild(ThreeSeven_part);
+
+        eighth_shape=new LShape();
+        eighth_shape.graphics.drawRect(x,y,q,w,e,r);
+        ThreeSeven_part.addChild(eighth_shape);
+
+        line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap3.x=850;
+            line_shap3.y=149;
+            ThreeSeven_part.addChild(line_shap3);
+        eighth_picture123=new LTextField();
+        eighth_picture123.text="批判性思维工具";
+        eighth_picture223=new LTextField();
+        eighth_picture223.text="1,\n\n\nR,\n\n\n(0,2)";
+        eighth_picture123.x=(LGlobal.width+1800)*0.296;
+        eighth_picture123.y=(LGlobal.width+1800)*0.038;
+        eighth_picture223.x=(LGlobal.width+1800)*0.298;
+        eighth_picture223.y=(LGlobal.width+1800)*0.051;
+        ThreeSeven_part.addChild(eighth_picture123);
+        ThreeSeven_part.addChild(eighth_picture223);
+
+        
+       // var button37 = new LButton(ThreeSeven_part,ThreeSeven_part,ThreeSeven_part);
+          //  trew5.addChild(button37);
+           LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            trew5.useCursor="pointer";
+            trew5.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            eighth_picture123.color="red";
+            eighth_picture223.color="red";
+      
+            });
+             trew5.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            eighth_picture223.color="fff";
+            eighth_picture123.color="fff";
+      
+            });
+            trew5.addEventListener(LMouseEvent.MOUSE_UP,run37);
+    
+
+       }
+
+       function three_eight(x,y,q,w,e,r){
+            var trew6 = new LSprite();
+        backLayer.addChild(trew6);
+        
+    ThreeEight_part=new LSprite();
+    trew6.addChild(ThreeEight_part);
+        eighth_shape=new LShape();
+        eighth_shape.graphics.drawRect(x,y,q,w,e,r);
+        ThreeEight_part.addChild(eighth_shape);
+         line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap3.x=850;
+            line_shap3.y=239;
+            ThreeEight_part.addChild(line_shap3);
+        eighth_picture1234=new LTextField();
+        eighth_picture1234.text="创新思维与创新力开发";
+        eighth_picture2234=new LTextField();
+        eighth_picture2234.text="2,\n\n\nR,\n\n\n(2,0)";
+        eighth_picture1234.x=(LGlobal.width+1800)*0.289;
+        eighth_picture1234.y=(LGlobal.width+1800)*0.069;
+        eighth_picture2234.x=(LGlobal.width+1800)*0.298;
+        eighth_picture2234.y=(LGlobal.width+1800)*0.081;
+        ThreeEight_part.addChild(eighth_picture1234);
+        ThreeEight_part.addChild(eighth_picture2234);
+
+       
+        //var button38 = new LButton(ThreeEight_part,ThreeEight_part,ThreeEight_part);
+           // trew6.addChild(button38);
+           LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            trew6.useCursor="pointer";
+            trew6.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            eighth_picture1234.color="red";
+            eighth_picture2234.color="red";
+      
+            });
+             trew6.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            eighth_picture2234.color="fff";
+            eighth_picture1234.color="fff";
+      
+            });
+            trew6.addEventListener(LMouseEvent.MOUSE_UP,run38);
+    
+
+       }
+
+       function three_nine(x,y,q,w,e,r){
+          var trew7 = new LSprite();
+        backLayer.addChild(trew7);
+         ThreeNine_part=new LSprite();
+    trew7.addChild(ThreeNine_part);
+        eighth_shape=new LShape();
+        eighth_shape.graphics.drawRect(x,y,q,w,e,r);
+        ThreeNine_part.addChild(eighth_shape);
+         line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap3.x=630;
+            line_shap3.y=470;
+            ThreeNine_part.addChild(line_shap3);
+        eighth_picture12345=new LTextField();
+        eighth_picture12345.text="大学生职业生涯规划1";
+        eighth_picture22345=new LTextField();
+        eighth_picture22345.text="2,\n\n\nR,\n\n\n(1,0)";
+        eighth_picture12345.x=(LGlobal.width+1800)*0.215;
+        eighth_picture12345.y=(LGlobal.width+1800)*0.146;
+        eighth_picture22345.x=(LGlobal.width+1800)*0.225;
+        eighth_picture22345.y=(LGlobal.width+1800)*0.158;
+        ThreeNine_part.addChild(eighth_picture12345);
+        ThreeNine_part.addChild(eighth_picture22345);
+
+      //  var button39 = new LButton(ThreeNine_part,ThreeNine_part,ThreeNine_part);
+            //trew7.addChild(button39);
+            LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            trew7.useCursor="pointer";
+            trew7.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            eighth_picture12345.color="red";
+            eighth_picture22345.color="red";
+      
+            });
+             trew7.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            eighth_picture22345.color="fff";
+            eighth_picture12345.color="fff";
+      
+            });
+            trew7.addEventListener(LMouseEvent.MOUSE_UP,run39);
+       }
+
+       function three_ten(x,y,q,w,e,r){
+           var trew8 = new LSprite();
+        backLayer.addChild(trew8);
+         ThreeTen_part=new LSprite();
+    trew8.addChild(ThreeTen_part);
+        eighth_shape=new LShape();
+        eighth_shape.graphics.drawRect(x,y,q,w,e,r);
+        ThreeTen_part.addChild(eighth_shape);
+         line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap3.x=850;
+            line_shap3.y=470;
+            ThreeTen_part.addChild(line_shap3);
+        eighth_picture123456=new LTextField();
+        eighth_picture123456.text="大学生职业生涯规划2";
+        eighth_picture223456=new LTextField();
+        eighth_picture223456.text="3,\n\n\nR,\n\n\n(1,0)";
+        eighth_picture123456.x=(LGlobal.width+1800)*0.289;
+        eighth_picture123456.y=(LGlobal.width+1800)*0.146;
+        eighth_picture223456.x=(LGlobal.width+1800)*0.298;
+        eighth_picture223456.y=(LGlobal.width+1800)*0.158;
+        ThreeTen_part.addChild(eighth_picture123456);
+        ThreeTen_part.addChild(eighth_picture223456);
+
+      
+       // var button310 = new LButton(ThreeTen_part,ThreeTen_part,ThreeTen_part);
+          //  trew8.addChild(button310);
+           LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            trew8.useCursor="pointer";
+            trew8.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            eighth_picture123456.color="red";
+            eighth_picture223456.color="red";
+      
+            });
+             trew8.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            eighth_picture223456.color="fff";
+            eighth_picture123456.color="fff";
+      
+            });
+            trew8.addEventListener(LMouseEvent.MOUSE_UP,run310);
+    
+
+       }
+
+       function three_eleven(x,y,q,w,e,r){
+           var trew9 = new LSprite();
+        backLayer.addChild(trew9);
+         ThreeEleven_part=new LSprite();
+    trew9.addChild(ThreeEleven_part);
+
+        eighth_shape=new LShape();
+        eighth_shape.graphics.drawRect(x,y,q,w,e,r);
+        ThreeEleven_part.addChild(eighth_shape);
+        line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap3.x=630;
+            line_shap3.y=560;
+            ThreeEleven_part.addChild(line_shap3);
+        eighth_picture1234567=new LTextField();
+        eighth_picture1234567.text="自我学习";
+        eighth_picture2234567=new LTextField();
+        eighth_picture2234567.text="2,\n\n\nR,\n\n\n(0,1)";
+        eighth_picture1234567.x=(LGlobal.width+1800)*0.228;
+        eighth_picture1234567.y=(LGlobal.width+1800)*0.176;
+        eighth_picture2234567.x=(LGlobal.width+1800)*0.225;
+        eighth_picture2234567.y=(LGlobal.width+1800)*0.188;
+        ThreeEleven_part.addChild(eighth_picture1234567);
+        ThreeEleven_part.addChild(eighth_picture2234567);
+
+  
+        //var button311 = new LButton(ThreeEleven_part,ThreeEleven_part,ThreeEleven_part);
+          //  backLayer.addChild(button311);
+           LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            trew9.useCursor="pointer";
+            trew9.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            eighth_picture1234567.color="red";
+            eighth_picture2234567.color="red";
+      
+            });
+             trew9.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            eighth_picture2234567.color="fff";
+            eighth_picture1234567.color="fff";
+      
+            });
+            trew9.addEventListener(LMouseEvent.MOUSE_UP,run311);
+   
+
+       }
+
+       function three_twelve(x,y,q,w,e,r){
+            var trew10 = new LSprite();
+        backLayer.addChild(trew10);
+        
+    ThreeTwelve_part=new LSprite();
+    trew10.addChild(ThreeTwelve_part);
+
+        eighth_shape=new LShape();
+        eighth_shape.graphics.drawRect(x,y,q,w,e,r);
+        ThreeTwelve_part.addChild(eighth_shape);
+          line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap3.x=850;
+            line_shap3.y=560;
+            ThreeTwelve_part.addChild(line_shap3);
+        eighth_picture12345678=new LTextField();
+        eighth_picture12345678.text="创业思维";
+        eighth_picture22345678=new LTextField();
+        eighth_picture22345678.text="3,\n\n\nR,\n\n\n(1,0)";
+        eighth_picture12345678.x=(LGlobal.width+1800)*0.302;
+        eighth_picture12345678.y=(LGlobal.width+1800)*0.176;
+        eighth_picture22345678.x=(LGlobal.width+1800)*0.298;
+        eighth_picture22345678.y=(LGlobal.width+1800)*0.188;
+        ThreeTwelve_part.addChild(eighth_picture12345678);
+        ThreeTwelve_part.addChild(eighth_picture22345678);
+
+
+        //var button312 = new LButton(ThreeTwelve_part,ThreeTwelve_part,ThreeTwelve_part);
+          //  backLayer.addChild(button312);
+          LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            trew10.useCursor="pointer";
+            trew10.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            eighth_picture12345678.color="red";
+            eighth_picture22345678.color="red";
+      
+            });
+             trew10.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            eighth_picture22345678.color="fff";
+            eighth_picture12345678.color="fff";
+      
+            });
+            trew10.addEventListener(LMouseEvent.MOUSE_UP,run312);
+
+
+       }
+
+       //监听 
+      
+       function run31(){};
+
+       
+       function run32(){};
+
+       
+       function run33(){};
+
+       
+       function run36(){};
+
+      
+       function run37(){};
+
+      
+       function run38(){};
+
+       
+       function run39(){};
+
+       
+       function run310(){};
+
+       
+       function run311(){};
+
+       
+       function run312(){};
+</script>
+</html>

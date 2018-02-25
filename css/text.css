@@ -1,0 +1,86 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 13px;
+	line-height: 1.75em;
+	font-family: Arial, sans-serif;
+	background: #e1e4e5 url('bg.png');
+	color: #383939;
+}
+
+#bg{
+	width:1300px;
+	margin: 0 auto;
+}
+
+#logo p{
+	text-align: center;
+	margin-top:3px;
+}
+
+
+/*导航栏*/
+#nav{
+	width:1200px;
+    margin:0 auto;
+   
+}
+#ab {
+	margin: 10px 0 0 0;
+	font-size: 1.2em;
+	font-family: "PT Sans Narrow", sans-serif;
+	text-shadow: 0 1px 0px;
+	text-transform: lowercase;
+}
+
+
+#nav a {
+	text-decoration: none;
+	color: #ffffff;
+	
+}
+
+#nav ul li {
+	display: block;
+	text-align: center;
+    background: #3c8c93;
+    margin-left:8px;
+    width:162px;
+    height:40px;
+    line-height: 40px;
+    float:left;
+}
+#nav  li:hover{
+	background-color:#008080;
+}
+#legend{
+	background-color: white;
+    width: 1200px;
+    height: 950px;
+    margin: 30px auto;
+}
+.footer{
+	width:1200px;
+	height:100px;
+	/*margin-top:20px;*/
+	background:#3c8c93;
+	font-family:"微软雅黑";
+	font-size:14px;
+	color:#fff;
+	text-align: center;
+	line-height:100px;
+	margin: 0 auto;
+	}
+
+.bottom{
+	margin-top:20px;
+	}
+.foot{
+	margin:0 auto;
+	margin-top: 70px;
+
+	}

@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>地图构造2</title>
+	<script type="text/javascript" src="lufylegend.js-lufylegend-1.10.1/lufylegend-1.10.1.min.js">
+	</script>
+	<script type="text/javascript" src="lufylegend.js-lufylegend-1.10.1/lufylegend.ui-0.14.1.min.js">
+	</script>
+  <script type="text/javascript" src="js/danzi2.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/text3.css">
+</head>
+<body>
+<div id="bg">
+		<div id="header">
+			<div id="logo">
+				<p>
+					<a href="#"><img src="logo.png" width="1200"></a>
+				</p>
+			</div>
+			<div id="nav">
+				<div id="ab">
+					<ul>
+						<li>
+							<a href="课程地图1.html">教育目标</a>
+						</li>
+						<li>
+							<a href="课程地图1.html#basic">基本素养</a>
+						</li>
+						<li>
+							<a href="#">课程规划</a>
+						</li>
+						<li>
+							<a href="#">课程地图构架</a>
+						</li>
+						<li>
+							<a href="指标构成.html" >指标构成</a>
+						</li>
+						<li>
+							<a href="#">培养路径</a>
+						</li>
+						<li>
+							<a href="#">发展路径</a>
+						</li>
+					</ul>
+					<br class="clear" />
+				</div>
+			</div>
+		</div>
+<div id="mylegend"></div>
+<div class="footer bottom">
+  
+                地址：四川省成都市金堂县大学城
+                联系电话：028-67935809
+                邮编：610400
+                备案号：51130030090125
+                网络报警：http://www.ncwa.com.cn 
+        </div>
+</body>
+<script type="text/javascript">
+	init(50,"mylegend",1200,700,main);
+    var line_shap1,lineback;
+	var first_picture,first_shape,first_part;
+    var second_part,second_picture,second_shape;
+    var third_part,third_picture,third_shape;
+    var forth_part,forth_picture,forth_shape;
+    var fifth_part,fifth_picture,fifth_shape;
+    var seventh_part,seventh_picture,seventh_shape;
+	function main(){
+		backLayer=new LSprite();
+		addChild(backLayer);
+
+    //块
+    lineback=new LSprite();
+    backLayer.addChild(lineback);
+
+    var new_OneOne=new LSprite();
+    first_part=new LSprite();
+    new_OneOne.addChild(first_part);
+    listen1();
+    
+    var new_OneTwo=new LSprite();
+    second_part=new LSprite();
+    new_OneTwo.addChild(second_part);
+    listen2();
+    
+    var new_OneThree=new LSprite();
+    third_part=new LSprite();
+    new_OneThree.addChild(third_part);
+    listen3();
+    
+    var new_OneFour=new LSprite();
+    forth_part=new LSprite();
+    new_OneFour.addChild(forth_part);
+    listen4();
+
+    fifth_part=new LSprite();
+    backLayer.addChild(fifth_part);
+    
+    sixth_part=new LSprite();
+    backLayer.addChild(sixth_part);
+    
+    seventh_part=new LSprite();
+    backLayer.addChild(seventh_part);
+
+    var new_OneEight=new LSprite();
+    eighth_part=new LSprite();
+    new_OneEight.addChild(eighth_part);
+    listen8();
+
+    var new_OneNine=new LSprite();
+    ninth_part=new LSprite();
+    new_OneNine.addChild(ninth_part);
+    listen9();
+
+    var new_OneTen=new LSprite();
+    tenth_part=new LSprite();
+    new_OneTen.addChild(tenth_part);
+    listen10();
+
+    var new_OneEleven=new LSprite();
+    eleventh_part=new LSprite();
+    new_OneEleven.addChild(eleventh_part);
+    listen11();
+
+    var new_OneTwelve=new LSprite();
+    twelve_part=new LSprite();
+    new_OneTwelve.addChild(twelve_part);
+    listen12();
+
+    var new_OneThirteen=new LSprite();
+    thirteenth_part=new LSprite();
+    new_OneThirteen.addChild(thirteenth_part);
+    listen13();
+
+    var new_OneForteen=new LSprite();
+    forteenth_part=new LSprite();
+    new_OneForteen.addChild(forteenth_part);
+    listen14();
+
+    var new_OneFifteen=new LSprite();
+    fifteenth_part=new LSprite();
+    new_OneFifteen.addChild(fifteenth_part);
+    listen15();
+    
+    var new_OneSixteen=new LSprite();
+    sixteenth_part=new LSprite();
+    new_OneSixteen.addChild(sixteenth_part);
+    listen16();
+
+    all=new LSprite();
+    backLayer.addChild(all);
+    all.addChild(new_OneOne);
+    all.addChild(new_OneTwo);
+    all.addChild(new_OneThree);
+    all.addChild(new_OneFour);
+    all.addChild(new_OneEight);
+    all.addChild(new_OneNine);
+    all.addChild(new_OneTen);
+    all.addChild(new_OneEleven);
+    all.addChild(new_OneTwelve);
+    all.addChild(new_OneThirteen);
+    all.addChild(new_OneForteen);
+    all.addChild(new_OneFifteen);
+    all.addChild(new_OneSixteen);
+
+    //图形
+    line();
+    one(1,"balck",[(LGlobal.width+1800)*0.025,(LGlobal.width+1800)*0.06,(LGlobal.width+1800)*0.020,(LGlobal.width+1800)*0.10]);
+    two(1,"balck",[(LGlobal.width+1800)*0.059,(LGlobal.width+1800)*0.024,(LGlobal.width+1800)*0.106,(LGlobal.width+1800)*0.020]);
+    three(1,"balck",[(LGlobal.width+1800)*0.059,(LGlobal.width+1800)*0.10,(LGlobal.width+1800)*0.106,(LGlobal.width+1800)*0.020]);
+    four(1,"balck",[(LGlobal.width+1800)*0.059,(LGlobal.width+1800)*0.176,(LGlobal.width+1800)*0.106,(LGlobal.width+1800)*0.020]);
+    five(1,"balck",[(LGlobal.width+1800)*0.175,(LGlobal.width+1800)*0.001,(LGlobal.width+1800)*0.1484,(LGlobal.width+1800)*0.070]);
+    six(1,"balck",[(LGlobal.width+1800)*0.175,(LGlobal.width+1800)*0.077,(LGlobal.width+1800)*0.1484,(LGlobal.width+1800)*0.070]);
+    seven(1,"balck",[(LGlobal.width+1800)*0.175,(LGlobal.width+1800)*0.153,(LGlobal.width+1800)*0.1484,(LGlobal.width+1800)*0.070]);
+    eight(1,"balck",[(LGlobal.width+1800)*0.183,(LGlobal.width+1800)*0.006,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    nine(1,"balck",[(LGlobal.width+1800)*0.256,(LGlobal.width+1800)*0.006,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    ten(1,"balck",[(LGlobal.width+1800)*0.183,(LGlobal.width+1800)*0.036,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    eleven(1,"balck",[(LGlobal.width+1800)*0.256,(LGlobal.width+1800)*0.036,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    twelve(1,"balck",[(LGlobal.width+1800)*0.183,(LGlobal.width+1800)*0.082,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    thirteen(1,"balck",[(LGlobal.width+1800)*0.256,(LGlobal.width+1800)*0.082,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    forteen(1,"balck",[(LGlobal.width+1800)*0.256,(LGlobal.width+1800)*0.112,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    fifteen(1,"balck",[(LGlobal.width+1800)*0.183,(LGlobal.width+1800)*0.174,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+    sixteen(1,"balck",[(LGlobal.width+1800)*0.256,(LGlobal.width+1800)*0.174,(LGlobal.width+1800)*0.060,(LGlobal.width+1800)*0.0245]);
+		//监听
+        
+
+    
+       
+       //鼠标监听
+
+       
+
+
+
+    //线条
+       function line(){
+            //第一条
+            line_shap1=new LSprite();
+            line_shap1.graphics.drawLine(1,"black",[30,0,0,0]);
+            line_shap1.x=495;
+            line_shap1.y=100;
+            lineback.addChild(line_shap1);
+            //第二条
+            line_shap2=new LSprite();
+            line_shap2.graphics.drawLine(1,"black",[30,0,0,0]);
+            line_shap2.x=495;
+            line_shap2.y=330;
+            lineback.addChild(line_shap2);
+            //第三条
+            line_shap3=new LSprite();
+            line_shap3.graphics.drawLine(1,"black",[30,0,0,0]);
+            line_shap3.x=495;
+            line_shap3.y=560;
+            lineback.addChild(line_shap3);
+            //第四条
+            line_shap4=new LSprite();
+            line_shap4.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap4.x=769;
+            line_shap4.y=60;
+            ninth_part.addChild(line_shap4);
+            //第五条
+            line_shap5=new LSprite();
+            line_shap5.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap5.x=550;
+            line_shap5.y=60;
+            eighth_part.addChild(line_shap5);
+            //第六条
+            line_shap6=new LSprite();
+            line_shap6.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap6.x=550;
+            line_shap6.y=155;
+            tenth_part.addChild(line_shap6);
+            //第七条
+            line_shap7=new LSprite();
+            line_shap7.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap7.x=769;
+            line_shap7.y=155;
+            eleventh_part.addChild(line_shap7);
+            //第八条
+            line_shap8=new LSprite();
+            line_shap8.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap8.x=550;
+            line_shap8.y=293;
+            twelve_part.addChild(line_shap8);
+            //第九条
+            line_shap2=new LSprite();
+            line_shap2.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap2.x=769;
+            line_shap2.y=293;
+            thirteenth_part.addChild(line_shap2);
+            //第十条
+            line_shap2=new LSprite();
+            line_shap2.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap2.x=769;
+            line_shap2.y=382;
+            forteenth_part.addChild(line_shap2);
+            //第十一条
+            line_shap2=new LSprite();
+            line_shap2.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap2.x=550;
+            line_shap2.y=565;
+            fifteenth_part.addChild(line_shap2);
+            //第十二条
+            line_shap2=new LSprite();
+            line_shap2.graphics.drawLine(1,"black",[179,0,0,0]);
+            line_shap2.x=769;
+            line_shap2.y=565;
+            sixteenth_part.addChild(line_shap2);
+            //第十三条
+            line_shap2=new LSprite();
+            line_shap2.graphics.drawLine(1,"black",[40,0,0,0]);
+            line_shap2.x=729;
+            line_shap2.y=42;
+            lineback.addChild(line_shap2);
+            //第十四条
+            line_shap2=new LSprite();
+            line_shap2.graphics.drawLine(1,"black",[40,0,0,0]);
+            line_shap2.x=729;
+            line_shap2.y=135;
+            lineback.addChild(line_shap2);
+            //第十五条
+            line_shap2=new LSprite();
+            line_shap2.graphics.drawLine(1,"black",[40,0,0,0]);
+            line_shap2.x=729;
+            line_shap2.y=272;
+            lineback.addChild(line_shap2);
+            //第十六条
+            line_shap2=new LSprite();
+            line_shap2.graphics.drawLine(1,"black",[40,0,0,0]);
+            line_shap2.x=729;
+            line_shap2.y=547;
+            lineback.addChild(line_shap2);
+            //第十七条
+            line_shap2=new LSprite();
+            line_shap2.graphics.drawLine(1,"black",[0,17,0,0]);
+            line_shap2.x=856;
+            line_shap2.y=320;
+            lineback.addChild(line_shap2);
+
+                           }
+       function one(x,y,q,w,e,r){
+        first_shape=new LSprite();
+        first_shape.graphics.drawRect(x,y,q,w,e,r);
+        first_part.addChild(first_shape);
+        //文字
+       	first_picture1=new LTextField();
+        first_picture2=new LTextField();
+        first_picture3=new LTextField();
+        first_picture4=new LTextField();
+        first_picture5=new LTextField();
+        first_picture6=new LTextField();
+        first_picture7=new LTextField();
+        first_picture8=new LTextField();
+        first_picture9=new LTextField();
+        first_picture10=new LTextField();
+       	first_picture1.text="基";
+        first_picture2.text="本";
+        first_picture3.text="素";
+        first_picture4.text="质";
+        first_picture5.text="与";
+        first_picture6.text="能";
+        first_picture7.text="力";
+        first_picture8.text="培";
+        first_picture9.text="养";
+        first_picture10.text="(24.5)";
+        first_picture1.x=(LGlobal.width+1800)*0.031;
+        first_picture2.x=(LGlobal.width+1800)*0.031;
+        first_picture3.x=(LGlobal.width+1800)*0.031;
+        first_picture4.x=(LGlobal.width+1800)*0.031;
+        first_picture5.x=(LGlobal.width+1800)*0.031;
+        first_picture6.x=(LGlobal.width+1800)*0.031;
+        first_picture7.x=(LGlobal.width+1800)*0.031;
+        first_picture8.x=(LGlobal.width+1800)*0.031;
+        first_picture9.x=(LGlobal.width+1800)*0.031;
+        first_picture10.x=(LGlobal.width+1800)*0.028;
+        first_picture1.y=(LGlobal.width+1800)*0.062;
+        first_picture2.y=(LGlobal.width+1800)*0.072;
+        first_picture3.y=(LGlobal.width+1800)*0.082;
+        first_picture4.y=(LGlobal.width+1800)*0.092;
+        first_picture5.y=(LGlobal.width+1800)*0.102;
+        first_picture6.y=(LGlobal.width+1800)*0.112;
+        first_picture7.y=(LGlobal.width+1800)*0.122;
+        first_picture8.y=(LGlobal.width+1800)*0.132;
+        first_picture9.y=(LGlobal.width+1800)*0.142;
+        first_picture10.y=(LGlobal.width+1800)*0.152;
+        first_picture1.size=(LGlobal.width+1800)*0.0075;
+        first_picture2.size=(LGlobal.width+1800)*0.0075;
+        first_picture3.size=(LGlobal.width+1800)*0.0075;
+        first_picture4.size=(LGlobal.width+1800)*0.0075;
+        first_picture5.size=(LGlobal.width+1800)*0.0075;
+        first_picture6.size=(LGlobal.width+1800)*0.0075;
+        first_picture7.size=(LGlobal.width+1800)*0.0075;
+        first_picture8.size=(LGlobal.width+1800)*0.0075;
+        first_picture9.size=(LGlobal.width+1800)*0.0075;
+        first_part.addChild(first_picture1);
+        first_part.addChild(first_picture2);
+        first_part.addChild(first_picture3);
+        first_part.addChild(first_picture4);
+        first_part.addChild(first_picture5);
+        first_part.addChild(first_picture6);
+        first_part.addChild(first_picture7);
+        first_part.addChild(first_picture8);
+        first_part.addChild(first_picture9);
+        first_part.addChild(first_picture10);
+ 
+       }
+
+       function two(x,y,q,w,e,r){
+            /*clickLayer = new LSprite();
+            second_part.addChild(clickLayer);
+            var upState = new LShape();
+            upState.graphics.drawRect(x,y,q,w,e,r);
+            title = new LTextField();
+            title.text = "政治思想素质培育课程";
+            title.color = "#FF0000";
+            title.size = 20;
+            title.x = (upState.getWidth() - title.getWidth())*0.5;
+            title.y = (upState.getHeight() - title.getHeight())*0.5;
+            upState.addChild(title);
+            var overState = new LShape();
+             overState.graphics.drawRect(x,y,q,w,e,r);
+            title = new LTextField();
+            title.text = "政治思想素质培育课程";
+            title.color = "#FF0000";
+            title.size = 20;
+            title.x = (upState.getWidth() - title.getWidth())*0.5;
+            title.y = (upState.getHeight() - title.getHeight())*0.5;
+            overState.addChild(title);
+            var downState = new LShape();
+            downState.graphics.drawRect(x,y,q,w,e,r);
+            title = new LTextField();
+            title.text = "开始游戏";
+            title.color = "#FF0000";
+            title.size = 20;
+            title.x = (upState.getWidth() - title.getWidth())*0.5;
+            title.y = (upState.getHeight() - title.getHeight())*0.5;
+            downState.addChild(title);
+            var button01 = new LButton(upState,overState,downState);
+            button01.x = 462;
+            button01.y = 490;
+            second_part.addChild(button01);
+            second_part.addEventListener(LMouseEvent.MOUSE_UP,run);*/
+        second_shape=new LShape();
+        second_shape.graphics.drawRect(x,y,q,w,e,r);
+        second_part.addChild(second_shape);
+        second_picture123=new LTextField();
+        second_picture123.text="政治思想素质培育课程";
+        second_picture223=new LTextField();
+        second_picture223.text="(10)";
+        second_picture123.x=(LGlobal.width+1800)*0.072;
+        second_picture123.y=(LGlobal.width+1800)*0.026;
+        second_picture123.size=(LGlobal.width+1800)*0.0075;
+        second_picture223.x=(LGlobal.width+1800)*0.105;
+        second_picture223.y=(LGlobal.width+1800)*0.036;
+        second_part.addChild(second_picture123);
+        second_part.addChild(second_picture223);
+        
+        
+       }
+
+       function three(x,y,q,w,e,r){
+        third_shape=new LShape();
+        third_shape.graphics.drawRect(x,y,q,w,e,r);
+        third_part.addChild(third_shape);
+        third_picture1234=new LTextField();
+        third_picture1234.text="身体素质与意志品质培育课程";
+        third_picture2234=new LTextField();
+        third_picture2234.text="(4.5)";
+        third_picture1234.x=(LGlobal.width+1800)*0.0615;
+        third_picture1234.y=(LGlobal.width+1800)*0.102;
+        third_picture1234.size=(LGlobal.width+1800)*0.0075;
+        third_picture2234.x=(LGlobal.width+1800)*0.105;
+        third_picture2234.y=(LGlobal.width+1800)*0.113;
+        third_part.addChild(third_picture1234);
+        third_part.addChild(third_picture2234);
+
+       }
+
+       function four(x,y,q,w,e,r){
+        forth_shape=new LShape();
+        forth_shape.graphics.drawRect(x,y,q,w,e,r);
+        forth_part.addChild(forth_shape);
+        forth_picture12345=new LTextField();
+        forth_picture12345.text="第二语言能力培育课程";
+        forth_picture22345=new LTextField();
+        forth_picture22345.text="(10)";
+        forth_picture12345.x=(LGlobal.width+1800)*0.072;
+        forth_picture12345.y=(LGlobal.width+1800)*0.178;
+        forth_picture12345.size=(LGlobal.width+1800)*0.0075;
+        forth_picture22345.x=(LGlobal.width+1800)*0.105;
+        forth_picture22345.y=(LGlobal.width+1800)*0.189;
+        forth_part.addChild(forth_picture12345);
+        forth_part.addChild(forth_picture22345);
+
+       }
+
+       function five(x,y,q,w,e,r){
+        fifth_shape=new LShape();
+        fifth_shape.graphics.drawRect(x,y,q,w,e,r);
+        fifth_part.addChild(fifth_shape);
+       }
+
+       function six(x,y,q,w,e,r){
+        sixth_shape=new LShape();
+        sixth_shape.graphics.drawRect(x,y,q,w,e,r);
+        sixth_part.addChild(sixth_shape);
+       }
+
+       function seven(x,y,q,w,e,r){
+        sixth_shape=new LShape();
+        sixth_shape.graphics.drawRect(x,y,q,w,e,r);
+        sixth_part.addChild(sixth_shape);
+       }
+
+       function eight(x,y,q,w,e,r){
+        eighth_shape=new LShape();
+        eighth_shape.graphics.drawRect(x,y,q,w,e,r);
+        eighth_part.addChild(eighth_shape);
+        eighth_picture1=new LTextField();
+        eighth_picture1.text="思想道德修养与法律基础";
+        eighth_picture2=new LTextField();
+        eighth_picture2.text="1,\n\n\nR,\n\n\n(3,0)";
+        eighth_picture1.x=(LGlobal.width+1800)*0.185;
+        eighth_picture1.y=(LGlobal.width+1800)*0.009;
+        eighth_picture2.x=(LGlobal.width+1800)*0.198;
+        eighth_picture2.y=(LGlobal.width+1800)*0.022;
+        eighth_part.addChild(eighth_picture1);
+        eighth_part.addChild(eighth_picture2);
+
+       }
+
+       function nine(x,y,q,w,e,r){
+        ninth_shape=new LShape();
+        ninth_shape.graphics.drawRect(x,y,q,w,e,r);
+        ninth_part.addChild(ninth_shape);
+        ninth_picture1=new LTextField();
+        ninth_picture1.text="军事理论";
+        ninth_picture2=new LTextField();
+        ninth_picture2.text="1,\n\n\nR,\n\n\n(2,0)";
+        ninth_picture1.x=(LGlobal.width+1800)*0.275;
+        ninth_picture1.y=(LGlobal.width+1800)*0.009;
+        ninth_picture2.x=(LGlobal.width+1800)*0.270;
+        ninth_picture2.y=(LGlobal.width+1800)*0.022;
+        ninth_part.addChild(ninth_picture1);
+        ninth_part.addChild(ninth_picture2);
+
+       }
+
+       function ten(x,y,q,w,e,r){
+        tenth_shape=new LShape();
+        tenth_shape.graphics.drawRect(x,y,q,w,e,r);
+        tenth_part.addChild(tenth_shape);
+        tenth_picture1=new LTextField();
+        tenth_picture1.text="形式与政策";
+        tenth_picture2=new LTextField();
+        tenth_picture2.text="1-2,\n\n\nR,\n\n\n(0.5,0.5)";
+        tenth_picture1.x=(LGlobal.width+1800)*0.200;
+        tenth_picture1.y=(LGlobal.width+1800)*0.042;
+        tenth_picture2.x=(LGlobal.width+1800)*0.193;
+        tenth_picture2.y=(LGlobal.width+1800)*0.053;
+        tenth_part.addChild(tenth_picture1);
+        tenth_part.addChild(tenth_picture2);
+
+       }
+
+       function eleven(x,y,q,w,e,r){
+        eleventh_shape=new LShape();
+        eleventh_shape.graphics.drawRect(x,y,q,w,e,r);
+        eleventh_part.addChild(eleventh_shape);
+        eleventh_picture1=new LTextField();
+        eleventh_picture2=new LTextField();
+        eleventh_picture3=new LTextField();
+        eleventh_picture4=new LTextField();
+        eleventh_picture1.text="军事理论毛泽东思想和中";
+        eleventh_picture2.text="国特色社会主义理论体系";
+        eleventh_picture3.text="概论";
+        eleventh_picture4.text="1,\n\n\nR,\n\n\n(0,4)";
+        eleventh_picture1.x=(LGlobal.width+1800)*0.258;
+        eleventh_picture1.y=(LGlobal.width+1800)*0.036;
+        eleventh_picture2.x=(LGlobal.width+1800)*0.258;
+        eleventh_picture2.y=(LGlobal.width+1800)*0.041;
+        eleventh_picture3.x=(LGlobal.width+1800)*0.279;
+        eleventh_picture3.y=(LGlobal.width+1800)*0.046;
+        eleventh_picture4.x=(LGlobal.width+1800)*0.270;
+        eleventh_picture4.y=(LGlobal.width+1800)*0.053;
+        eleventh_part.addChild(eleventh_picture1);
+        eleventh_part.addChild(eleventh_picture2);
+        eleventh_part.addChild(eleventh_picture3);
+        eleventh_part.addChild(eleventh_picture4);
+
+       }
+
+       function twelve(x,y,q,w,e,r){
+        twelve_shape=new LShape();
+        twelve_shape.graphics.drawRect(x,y,q,w,e,r);
+        twelve_part.addChild(twelve_shape);
+        twelve_picture1=new LTextField();
+        twelve_picture1.text="大学体育 1~4";
+        twelve_picture2=new LTextField();
+        twelve_picture2.text="1-2,\n\n\nR,\n\n\n(1,1)";
+        twelve_picture1.x=(LGlobal.width+1800)*0.197;
+        twelve_picture1.y=(LGlobal.width+1800)*0.087;
+        twelve_picture2.x=(LGlobal.width+1800)*0.197;
+        twelve_picture2.y=(LGlobal.width+1800)*0.099;
+        twelve_part.addChild(twelve_picture1);
+        twelve_part.addChild(twelve_picture2);
+
+       }
+
+       function thirteen(x,y,q,w,e,r){
+        thirteenth_shape=new LShape();
+        thirteenth_shape.graphics.drawRect(x,y,q,w,e,r);
+        thirteenth_part.addChild(thirteenth_shape);
+        thirteenth_picture1=new LTextField();
+        thirteenth_picture1.text="大学生心理健康教育 1~2";
+        thirteenth_picture2=new LTextField();
+        thirteenth_picture2.text="1,\n\n\nR,\n\n\n(1,1)";
+        thirteenth_picture1.x=(LGlobal.width+1800)*0.258;
+        thirteenth_picture1.y=(LGlobal.width+1800)*0.087;
+        thirteenth_picture2.x=(LGlobal.width+1800)*0.270;
+        thirteenth_picture2.y=(LGlobal.width+1800)*0.099;
+        thirteenth_part.addChild(thirteenth_picture1);
+        thirteenth_part.addChild(thirteenth_picture2);
+
+       }
+
+       function forteen(x,y,q,w,e,r){
+        forteenth_shape=new LShape();
+        forteenth_shape.graphics.drawRect(x,y,q,w,e,r);
+        forteenth_part.addChild(forteenth_shape);
+        forteenth_picture1=new LTextField();
+        forteenth_picture1.text="军训";
+        forteenth_picture2=new LTextField();
+        forteenth_picture2.text="1,\n\n\nR,\n\n\n(0,5,0)";
+        forteenth_picture1.x=(LGlobal.width+1800)*0.280;
+        forteenth_picture1.y=(LGlobal.width+1800)*0.117;
+        forteenth_picture2.x=(LGlobal.width+1800)*0.270;
+        forteenth_picture2.y=(LGlobal.width+1800)*0.129;
+        forteenth_part.addChild(forteenth_picture1);
+        forteenth_part.addChild(forteenth_picture2);
+
+       }
+
+       function fifteen(x,y,q,w,e,r){
+        fifteenth_shape=new LShape();
+        fifteenth_shape.graphics.drawRect(x,y,q,w,e,r);
+        fifteenth_part.addChild(fifteenth_shape);
+        fifteenth_picture1=new LTextField();
+        fifteenth_picture1.text="大学英语 1~2";
+        fifteenth_picture2=new LTextField();
+        fifteenth_picture2.text="1,\n\n\nR,\n\n\n(4,4)";
+        fifteenth_picture1.x=(LGlobal.width+1800)*0.197;
+        fifteenth_picture1.y=(LGlobal.width+1800)*0.178;
+        fifteenth_picture2.x=(LGlobal.width+1800)*0.197;
+        fifteenth_picture2.y=(LGlobal.width+1800)*0.190;
+        fifteenth_part.addChild(fifteenth_picture1);
+        fifteenth_part.addChild(fifteenth_picture2);
+
+       }
+
+       function sixteen(x,y,q,w,e,r){
+        sixteenth_shape=new LShape();
+        sixteenth_shape.graphics.drawRect(x,y,q,w,e,r);
+        sixteenth_part.addChild(sixteenth_shape);
+        sixteenth_picture1=new LTextField();
+        sixteenth_picture1.text="服务英语";
+        sixteenth_picture2=new LTextField();
+        sixteenth_picture2.text="2,\n\n\nR,\n\n\n(0,2)";
+        sixteenth_picture1.x=(LGlobal.width+1800)*0.275;
+        sixteenth_picture1.y=(LGlobal.width+1800)*0.178;
+        sixteenth_picture2.x=(LGlobal.width+1800)*0.270;
+        sixteenth_picture2.y=(LGlobal.width+1800)*0.190;
+        sixteenth_part.addChild(sixteenth_picture1);
+        sixteenth_part.addChild(sixteenth_picture2);
+
+       }
+
+       function listen1(){
+        //var button01 = new LButton(first_part,first_part,first_part);
+           // new_OneOne.addChild(button01);
+           LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneOne.useCursor="pointer";
+            new_OneOne.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+          first_picture1.color="red";
+            first_picture2.color="red";
+            first_picture3.color="red";
+            first_picture4.color="red";
+            first_picture5.color="red";
+            first_picture6.color="red";
+            first_picture7.color="red";
+            first_picture8.color="red";
+            first_picture9.color="red";
+            first_picture10.color="red";
+           
+           
+            });
+             new_OneOne.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+            first_picture1.color="fff";
+            first_picture2.color="fff";
+            first_picture3.color="fff";
+            first_picture4.color="fff";
+            first_picture5.color="fff";
+            first_picture6.color="fff";
+            first_picture7.color="fff";
+            first_picture8.color="fff";
+            first_picture9.color="fff";
+            first_picture10.color="fff";
+            });
+            new_OneOne.addEventListener(LMouseEvent.MOUSE_DOWN,run1);
+       }
+       function run1(){}
+
+        function listen2(){
+      //  var button02 = new LButton(second_part,second_part,second_part);
+           // new_OneTwo.addChild(button02);
+           LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneTwo.useCursor="pointer";
+            new_OneTwo.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              second_picture123.color="red";
+            second_picture223.color="red";
+           
+            });
+             new_OneTwo.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            second_picture123.color="fff";
+            second_picture223.color="fff";
+           
+            
+            });
+            new_OneTwo.addEventListener(LMouseEvent.MOUSE_UP,run2);
+       }
+       function run2(){}
+
+       function listen3(){
+        //var button03 = new LButton(third_part,third_part,third_part);
+           // new_OneThree.addChild(button03);
+           LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneThree.useCursor="pointer";
+            new_OneThree.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              third_picture1234.color="red";
+            third_picture2234.color="red";
+           
+            });
+             new_OneThree.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            third_picture1234.color="fff";
+            third_picture2234.color="fff";
+           
+            
+            });
+            new_OneThree.addEventListener(LMouseEvent.MOUSE_UP,run3);
+       }
+       function run3(){}
+
+       function listen4(){
+       // var button04 = new LButton(forth_part,forth_part,forth_part);
+         //   new_OneFour.addChild(button04);
+         LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneFour.useCursor="pointer";
+            new_OneFour.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              forth_picture12345.color="red";
+            forth_picture22345.color="red";
+           
+            });
+             new_OneFour.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            forth_picture12345.color="fff";
+            forth_picture22345.color="fff";
+           
+            
+            });
+            new_OneFour.addEventListener(LMouseEvent.MOUSE_UP,run4);
+       }
+       function run4(){}
+
+       function listen5(){//eighth_picture1
+      //  var button05 = new LButton(fifth_part,fifth_part,fifth_part);
+            //backLayer.addChild(button05);
+           
+            backLayer.addEventListener(LMouseEvent.MOUSE_UP,run5);
+       }
+       function run5(){}
+
+       function listen6(){
+        var button06 = new LButton(sixth_part,sixth_part,sixth_part);
+            backLayer.addChild(button06);
+            backLayer.addEventListener(LMouseEvent.MOUSE_UP,run6);
+       }
+       function run6(){}
+
+       function listen7(){
+        var button07 = new LButton(seventh_part,seventh_part,seventh_part);
+            backLayer.addChild(button07);
+            backLayer.addEventListener(LMouseEvent.MOUSE_UP,run7);
+       }
+       function run7(){}
+
+       function listen8(){
+        //var button08 = new LButton(eighth_part,eighth_part,eighth_part);
+           // new_OneEight.addChild(button08);
+            LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneEight.useCursor="pointer";
+            new_OneEight.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              eighth_picture1.color="red";
+            eighth_picture2.color="red";
+           
+            });
+             new_OneEight.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            eighth_picture1.color="fff";
+            eighth_picture2.color="fff";
+           
+            
+            });
+            new_OneEight.addEventListener(LMouseEvent.MOUSE_UP,run8);
+       }
+       function run8(){}
+
+        function listen9(){
+        //var button09 = new LButton(ninth_part,ninth_part,ninth_part);
+            //new_OneNine.addChild(button09);
+            LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneNine.useCursor="pointer";
+            new_OneNine.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              ninth_picture1.color="red";
+            ninth_picture2.color="red";
+           
+            });
+             new_OneNine.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            ninth_picture1.color="fff";
+            ninth_picture2.color="fff";
+           
+            
+            });
+            new_OneNine.addEventListener(LMouseEvent.MOUSE_UP,run9);
+       }
+       function run9(){}
+
+       function listen10(){
+        //var button010 = new LButton(tenth_part,tenth_part,tenth_part);
+           // new_OneTen.addChild(button010);
+            LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneTen.useCursor="pointer";
+            new_OneTen.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              tenth_picture1.color="red";
+            tenth_picture2.color="red";
+           
+            });
+             new_OneTen.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            tenth_picture1.color="fff";
+            tenth_picture2.color="fff";
+           
+            
+            });
+            new_OneTen.addEventListener(LMouseEvent.MOUSE_UP,run10);
+       }
+       function run10(){}
+
+       function listen11(){
+      //  var button011 = new LButton(eleventh_part,eleventh_part,eleventh_part);
+          //  new_OneEleven.addChild(button011);
+          LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneEleven.useCursor="pointer";
+            new_OneEleven.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              eleventh_picture1.color="red";
+            eleventh_picture2.color="red";
+            eleventh_picture3.color="red";
+            eleventh_picture4.color="red";
+           
+            });
+             new_OneEleven.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            eleventh_picture1.color="fff";
+            eleventh_picture2.color="fff";
+            eleventh_picture3.color="fff";
+            eleventh_picture4.color="fff";
+           
+            
+            });
+            new_OneEleven.addEventListener(LMouseEvent.MOUSE_UP,run11);
+       }
+       function run11(){}
+
+       function listen12(){
+        //var button012 = new LButton(twelve_part,twelve_part,twelve_part);
+           // new_OneTwelve.addChild(button012);
+           LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneTwelve.useCursor="pointer";
+            new_OneTwelve.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              twelve_picture1.color="red";
+            twelve_picture2.color="red";
+    
+           
+            });
+             new_OneTwelve.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            twelve_picture1.color="fff";
+            twelve_picture2.color="fff";
+            
+           
+            
+            });
+            new_OneTwelve.addEventListener(LMouseEvent.MOUSE_UP,run12);
+       }
+       function run12(){}
+
+       function listen13(){
+        //var button013 = new LButton(thirteenth_part,thirteenth_part,thirteenth_part);
+            //new_OneThirteen.addChild(button013);
+            LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneThirteen.useCursor="pointer";
+            new_OneThirteen.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              thirteenth_picture1.color="red";
+            thirteenth_picture2.color="red";
+    
+           
+            });
+             new_OneThirteen.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            thirteenth_picture1.color="fff";
+            thirteenth_picture2.color="fff";
+            
+           
+            
+            });
+            new_OneThirteen.addEventListener(LMouseEvent.MOUSE_UP,run13);
+       }
+       function run13(){}
+
+       function listen14(){
+       // var button014 = new LButton(forteenth_part,forteenth_part,forteenth_part);
+         //   new_OneForteen.addChild(button014);
+          LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneForteen.useCursor="pointer";
+            new_OneForteen.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              forteenth_picture1.color="red";
+            forteenth_picture2.color="red";
+    
+           
+            });
+             new_OneForteen.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            forteenth_picture1.color="fff";
+            forteenth_picture2.color="fff";
+            
+           
+            
+            });
+            new_OneForteen.addEventListener(LMouseEvent.MOUSE_UP,run14);
+       }
+       function run14(){}
+
+       function listen15(){
+       // var button015 = new LButton(fifteenth_part,fifteenth_part,fifteenth_part);
+         //   new_OneFifteen.addChild(button015);
+          LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneFifteen.useCursor="pointer";
+            new_OneFifteen.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              fifteenth_picture1.color="red";
+            fifteenth_picture2.color="red";
+    
+           
+            });
+             new_OneFifteen.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            fifteenth_picture1.color="fff";
+            fifteenth_picture2.color="fff";
+            
+           
+            
+            });
+            new_OneFifteen.addEventListener(LMouseEvent.MOUSE_UP,run15);
+       }
+       function run15(){}
+
+       function listen16(){
+       // var button016 = new LButton(sixteenth_part,sixteenth_part,sixteenth_part);
+           // new_OneSixteen.addChild(button016);
+            LMouseEventContainer.set(LMouseEvent.MOUSE_MOVE,false);
+            new_OneSixteen.useCursor="pointer";
+            new_OneSixteen.addEventListener(LMouseEvent.MOUSE_OVER,function(){
+            
+              sixteenth_picture1.color="red";
+            sixteenth_picture2.color="red";
+    
+           
+            });
+             new_OneSixteen.addEventListener(LMouseEvent.MOUSE_OUT,function(){
+             
+
+            sixteenth_picture1.color="fff";
+            sixteenth_picture2.color="fff";
+            
+           
+            
+            });
+            new_OneSixteen.addEventListener(LMouseEvent.MOUSE_DOWN,run16);
+       }
+       function run16(){}
+   }
+</script>
+</html>
